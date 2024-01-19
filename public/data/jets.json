@@ -1,0 +1,28 @@
+[
+    {
+        "turbo": {
+            "sampleAitcraft": "PC-12",
+            "maxNmRange": 1765,
+            "crusingSpeed": 290,
+            "crusingAltitude": "30,000 ft"
+        },
+        "light": {
+            "sampleAitcraft": "Embraer Phenom 100",
+            "maxNmRange": 2100,
+            "crusingSpeed": 433,
+            "crusingAltitude": "45,000 FT"
+        },
+        "mid": {
+            "sampleAitcraft": "Hawker Beechcraft 750",
+            "maxNmRange": 2950,
+            "crusingSpeed": 494,
+            "crusingAltitude": "48,000 FT"
+        },
+        "heavy": {
+            "sampleAitcraft": "Gulfstream G500",
+            "maxNmRange": 3800,
+            "crusingSpeed": 566,
+            "crusingAltitude": "51,000 ft"
+        }
+    }
+]

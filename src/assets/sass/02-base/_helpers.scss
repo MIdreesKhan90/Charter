@@ -1,0 +1,145 @@
+// Helper SCSS
+// Mixin Font smoothing
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Media
+@mixin only-large {
+  @media (min-width: $laptop-width) {
+    @content;
+  }
+}
+
+@mixin mini-mobile {
+  @media (max-width: $mini-mobile-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key == mobile) {
+      @include mobile {
+        @content;
+      }
+    } @else if ($key == tablet) {
+      @include tablet {
+        @content;
+      }
+    } @else if ($key == laptop) {
+      @include desktop {
+        @content;
+      }
+    } @else if ($key == desktop) {
+      @include desktop {
+        @content;
+      }
+    }
+  }
+}
+
+// Placehoders
+%bg-image {
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+%absolute-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.article-inner-wrapper-22 {
+  display: none;
+}
+
+.embed-16by9 {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.section-title {
+  padding: 80px 0 115px;
+  @include tablet {
+    padding: 79px 0 71px;
+  }
+  text-align: center;
+  .section-title-header {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    line-height: 1.33em;
+    margin-bottom: 26px;
+    letter-spacing: 0.08em;
+  }
+  .section-title-body {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5em;
+    max-width: 544px;
+    margin: 0 auto;
+  }
+}

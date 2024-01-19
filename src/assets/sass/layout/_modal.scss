@@ -1,0 +1,270 @@
+// Modal SCSS
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba($black, 80%);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    display: flex;
+    transition: 0.3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        & .modal-block {
+            transform: translateY(0px);
+        }
+    }
+    & .modal-block {
+        margin-top: auto;
+        margin-bottom: auto;
+        background: $white;
+        box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1);
+        border-radius: 8px;
+        padding: 48px;
+        width: 100%;
+        max-width: 465px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        transition: 0.3s all ease;
+        transform: translateY(32px);
+        @include tablet {
+            padding: 24px;
+        }
+        & .btn-close {
+            background-color: transparent;
+            border: none;
+            top: 24px;
+            right: 24px;
+            position: absolute;
+            @include tablet {
+                top: 12px;
+                right: 12px;
+            }
+        }
+        & .modal-icon {
+            margin-bottom: 16px;
+        }
+        & h4 {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 44px;
+            color: $gray-900;
+            margin-bottom: 16px;
+            @include tablet {
+                font-size: 30px;
+                line-height: 42px;
+            }
+        }
+        &>p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+            color: #6B7280;
+        }
+        & .modal-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+            & .modal-field {
+                margin-bottom: 24px;
+                text-align: left;
+                position: relative;
+                & label {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.08em;
+                    margin-bottom: 4px;
+                }
+                & input {
+                    font-size: 14px;
+                    line-height: 20px;
+                    width: 100%;
+                    padding: 10px 12px;
+                    border: 1px solid $gray-200;
+                    height: 40px;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    border-radius: 6px;
+                    transition: 0.2s all ease;
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                    &::placeholder {
+                        color: $gray-600;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &:focus {
+                        border-color: #0770E3;
+                    }
+                    &.error {
+                        border-color: #f74949;
+                        color: #f74949;
+                        background-color: #ffeded;
+                    }
+                }
+                & textarea {
+                    font-size: 14px;
+                    line-height: 20px;
+                    width: 100%;
+                    padding: 10px 12px;
+                    border: 1px solid $gray-200;
+                    height: 72px;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    border-radius: 6px;
+                    resize: none;
+                    transition: 0.2s all ease;
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                    &::placeholder {
+                        color: $gray-600;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &:focus {
+                        border-color: #0770E3;
+                    }
+                    &.error {
+                        border-color: #f74949;
+                        color: #f74949;
+                        background-color: #ffeded;
+                    }
+                }
+                & select {
+                    font-size: 14px;
+                    line-height: 20px;
+                    width: 100%;
+                    padding: 10px 12px;
+                    background-color: $white;
+                    border: 1px solid $gray-200;
+                    height: 40px;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    border-radius: 6px;
+                    transition: 0.2s all ease;
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                    &::placeholder {
+                        color: $gray-600;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &:focus {
+                        border-color: #0770E3;
+                    }
+                    &.error {
+                        border-color: #f74949;
+                        color: #f74949;
+                        background-color: #ffeded;
+                    }
+                }
+                & .help-text {
+                    color: $primary;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    display: block;
+                    margin-top: 6px;
+                }
+                & .counter {
+                    position: absolute;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #737373;
+                    right: 0;
+                    top: 3px;
+                }
+            }
+        }
+    }
+    & .modal-about {
+        margin-top: auto;
+        margin-bottom: auto;
+        background: $white;
+        box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1);
+        border-radius: 8px;
+        padding: 48px;
+        width: 100%;
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        position: relative;
+        transition: 0.3s all ease;
+        transform: translateY(32px);
+        @include tablet {
+            padding: 24px;
+        }
+        & .btn-close {
+            background-color: transparent;
+            border: none;
+            top: 24px;
+            right: 24px;
+            position: absolute;
+            @include tablet {
+                top: 12px;
+                right: 12px;
+            }
+        }
+        & .modal-icon {
+            margin-bottom: 16px;
+        }
+        & h2 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 36px;
+            color: $gray-900;
+            margin-bottom: 16px;
+            text-align: center;
+            width: 100%;
+            @include tablet {
+                font-size: 24px;
+                line-height: 32px;
+                text-align: left;
+            }
+        }
+        &>p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+            color: #6B7280;
+            & b {
+                color: $gray-900;
+            }
+        }
+        & li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

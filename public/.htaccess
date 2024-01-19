@@ -1,0 +1,36 @@
+
+####################################################
+#	file:		/.htaccess
+#	author:		Ron Bentata (@ronbentata)
+#	date:		Feb 10, 2023
+####################################################
+
+
+IndexIgnore *
+Options -Indexes 
+
+# Various rewrite rules
+<IfModule mod_rewrite.c>
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# For security reasons, Option followsymlinks cannot be overridden.
+#	Options +FollowSymlinks
+	Options +SymLinksIfOwnerMatch
+	RewriteEngine on
+	
+	RewriteBase /
+	RewriteRule ^/index\.php$ - [L]
+	
+	RewriteRule ^(.*)PHPSESSID=[a-zA-Z0-9]*(.*) $1$2 [L,QSA]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L,QSA]
+	#RewriteRule ^(.*)$ https://test.imp-jets.com/index.php [L,QSA]
+</IfModule>
+
+

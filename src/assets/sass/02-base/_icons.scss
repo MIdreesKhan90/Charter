@@ -1,0 +1,47 @@
+
+
+$icons: (
+    "accessibility" "svg" 15px 17px,
+    "contact-email" "svg" 24px 26px,
+    "contact-phone" "svg" 24px 24px,
+    "contact-whatsapp" "svg" 24px 24px,
+    "facebook" "svg" 25px 25px,
+    "instagram" "svg" 25px 25px,
+    "linkedin" "svg" 25px 25px,
+    "globe" "svg" 24px 24px,
+    "flight-up" "svg" 24px 24px,
+    "arrow-left-right" "svg" 25px 24px,
+    "flight-down" "svg" 24px 24px,
+    "calendar" "svg" 24px 24px,
+    "travelers" "svg" 22px 22px,
+    "arrow-right-circle-white" "svg" 21px 21px,
+    "whatsapp" "svg" 24px 24px,
+    "phone" "svg" 24px 25px,
+    "phone-black" "svg" 24px 25px,
+    "angle-right" "svg" 5px 8px,
+    "share" "svg" 19px 21px,
+    "share-facebook" "svg" 25px 25px,
+    "share-twitter" "svg" 25px 20px,
+    "share-linkedin" "svg" 25px 25px,
+    "share-whatsapp" "svg" 25px 25px,
+    "alert-circle" "svg" 17px 17px,
+    "cross-circle" "svg" 21px 20px,
+    "article-right-chevron" "png" 14px 14px,
+    // "" "svg" 24px 24px,
+  );
+
+  @each $name, $fileType, $width, $height in $icons {
+    .icon-#{$name} {
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url('#{$icons-path}/#{$name}.#{$fileType}');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      @if ($width != "") {
+        width: $width;
+      }
+      @if ($height != "") {
+        height: $height;
+      }
+    }
+  }

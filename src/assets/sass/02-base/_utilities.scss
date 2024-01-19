@@ -1,0 +1,149 @@
+//  Ulilites SCSS
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #111f44;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2878bb;
+  }
+}
+
+body{
+  &.search-sticky-state1{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  @include mobile{
+    &.search-sticky-state3{
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}
+
+* {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+input {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+textarea {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  max-width: $container;
+  padding-left: $gutter-x;
+  padding-right: $gutter-x;
+  margin: 0 auto;
+
+  @include laptop {
+    padding-left: $gutter-x-xs;
+    padding-right: $gutter-x-xs;
+  }
+  @include mobile {
+    padding-left: $gutter-x-xxs;
+    padding-right: $gutter-x-xxs;
+  }
+}
+.container-fluid {
+  padding-left: $gutter-x;
+  padding-right: $gutter-x;
+
+  @include laptop {
+    padding-left: $gutter-x-xs;
+    padding-right: $gutter-x-xs;
+  }
+  @include mobile {
+    padding-left: $gutter-x-xxs;
+    padding-right: $gutter-x-xxs;
+  }
+}
+
+.dropdown-block {
+  position: relative;
+  & .dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    animation: moveDownLess 200ms ease;
+    border: 1px solid $gray-200;
+    border-radius: 4px;
+    box-shadow: 0px 10px 40px 0px rgba(82, 63, 105, 0.15);
+    z-index: 30;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.search-block {
+  animation: moveUp 700ms ease;
+}
+
+header {
+  animation: fadeIn 800ms linear;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .only-desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .only-mobile {
+    display: none !important;
+  }
+}
+
+.bg-grey-300{
+  background-color: $gray-300;
+}
+
+.w-100{
+  width: 100%;
+}

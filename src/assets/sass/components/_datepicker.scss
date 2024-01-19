@@ -1,0 +1,59 @@
+// Datepicker SCSS
+.single-input {
+    width: 100%;
+}
+
+.vc-container {
+    --blue-600: #27273F;
+    --blue-700: #2B68DE;
+    --blue-200: #dae6ff;
+    font-family: $font-nunito;
+    color: $gray-900;
+    --shadow-lg: 0px 10px 40px 0px rgba(82, 63, 105, 0.15);
+    border-color: #E5E7EB;
+    --rounded-lg: 4px
+}
+
+.vc-day-content.is-disabled {
+    pointer-events: none;
+    text-decoration: line-through;
+    cursor: not-allowed;
+    color: var(--gray-500);
+}
+
+.vc-header {
+    border-bottom: 1px solid $gray-200;
+    padding: 10px 16px 10px;
+}
+
+.vc-weeks {
+    padding: 12px 6px 6px 6px;
+}
+
+.vc-title {
+    font-weight: bold;
+}
+
+.vc-nav-item:focus {
+    border-color: transparent;
+}
+
+.vc-nav-title:focus {
+    border-color: transparent;
+}
+
+.vc-nav-arrow:focus {
+    border-color: transparent;
+}
+
+.vc-popover-content-wrapper {
+    --popover-vertical-content-offset: -1px;
+}
+
+.vc-popover-caret {
+    display: none;
+}
+
+.vc-popover-content-wrapper {
+    z-index: 99999;
+}

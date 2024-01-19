@@ -1,0 +1,119 @@
+[
+    {
+        "name": "Addison Airport",
+        "address": "Dallas, TX, United States",
+        "coords_lat": "32.968601",
+        "coords_long": "-96.836403",
+        "code_ata": "ADS",
+        "code": "KADS",
+        "hours_diff": "-5.00"
+    },
+    {
+        "name": "Buffalo Niagara International Airport",
+        "address": "Buffalo, NY, United States",
+        "coords_lat": "42.940498",
+        "coords_long": "-78.732201",
+        "code_ata": "BUF",
+        "code": "KBUF",
+        "hours_diff": "-5.00"
+    },
+    {
+        "name": "Fort Lauderdale Executive Airport",
+        "address": "Fort Lauderdale, FL, United States",
+        "coords_lat": "26.197300",
+        "coords_long": "-80.170700",
+        "code_ata": "FXE",
+        "code": "KFXE",
+        "hours_diff": "-4.00"
+    },
+    {
+        "name": "McCarran International Airport",
+        "address": "Las Vegas, NV, United States",
+        "coords_lat": "36.080101",
+        "coords_long": "-115.152000",
+        "code_ata": "LAS",
+        "code": "KLAS",
+        "hours_diff": "-7.00"
+    },
+    {
+        "name": "Los Angeles International Airport",
+        "address": "Los Angeles, CA, United States",
+        "coords_lat": "33.942501",
+        "coords_long": "-118.407997",
+        "code_ata": "LAX",
+        "code": "KLAX",
+        "hours_diff": "-7.00"
+    },
+    {
+        "name": "Miami International Airport",
+        "address": "Miami, FL, United States",
+        "coords_lat": "25.793200",
+        "coords_long": "-80.290604",
+        "code_ata": "MIA",
+        "code": "KMIA",
+        "hours_diff": "-4.00"
+    },
+    {
+        "name": "Metropolitan Oakland International Airport",
+        "address": "Oakland, CA, United States",
+        "coords_lat": "37.721298",
+        "coords_long": "-122.221001",
+        "code_ata": "OAK",
+        "code": "KOAK",
+        "hours_diff": "-7.00"
+    },
+    {
+        "name": "Opa-locka Executive Airport",
+        "address": "Miami, FL, United States",
+        "coords_lat": "25.907000",
+        "coords_long": "-80.278397",
+        "code_ata": "OPF",
+        "code": "KOPF",
+        "hours_diff": "-4.00"
+    },
+    {
+        "name": "San Diego International Airport",
+        "address": "San Diego, CA, United States",
+        "coords_lat": "32.733601",
+        "coords_long": "-117.190002",
+        "code_ata": "SAN",
+        "code": "KSAN",
+        "hours_diff": "-7.00"
+    },
+    {
+        "name": "Teterboro Airport",
+        "address": "Teterboro, NJ, United States",
+        "coords_lat": "40.850101",
+        "coords_long": "-74.060799",
+        "code_ata": "TEB",
+        "code": "KTEB",
+        "hours_diff": "-5.00"
+    },
+    {
+        "name": "DADE-COLLIER TRNG",
+        "address": "Miami, FL , United States",
+        "coords_lat": "25.861668",
+        "coords_long": "-80.896385",
+        "code_ata": "TNT",
+        "code": "KTNT",
+        "hours_diff": "-4.00"
+    },
+    {
+        "name": "Van Nuys Airport",
+        "address": "Van Nuys, CA, United States",
+        "coords_lat": "34.209801",
+        "coords_long": "-118.489998",
+        "code_ata": "VNY",
+        "code": "KVNY",
+        "hours_diff": "-7.00"
+    },
+    {
+        "name": "St Michael",
+        "address": "St Michael, AK, United States",
+        "coords_lat": "63.490101",
+        "coords_long": "-162.110001",
+        "code_ata": "SMK",
+        "code": "PAMK",
+        "hours_diff": "-8.00"
+    }
+]

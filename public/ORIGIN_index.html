@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+	<?if($___articles[$___article_id]['id']>0){?>
+		<title><?=$___articles[$___article_id]['seo-title'];?></title>
+		<meta name="description" content="<?=$___articles[$___article_id]['seo-desc'];?>" />
+		<meta property="og:title" content="<?=$___articles[$___article_id]['seo-title'];?>" />
+		<meta property="og:description" content="<?=$___articles[$___article_id]['seo-desc'];?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://www.impjets.com/charter/article/<?=$___articles[$___article_id]['url'];?>" />
+		<meta property="og:image" content="https://www.impjets.com/charter/data/articles/<?=$___article_id;?>.png" />
+		<!--
+		<meta property="og:article:published_time" content="" />
+		<meta property="og:article:modified_time" content="" />
+		<meta property="og:article:expiration_time" content="" />
+		<meta property="og:article:author" content="" />
+		<meta property="og:article:section" content="" />
+		<meta property="og:article:tag" content="" />
+		-->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="impjets.com" />
+		<meta name="twitter:title" content="<?=$___articles[$___article_id]['seo-title'];?>" />
+		<meta name="twitter:description" content="<?=$___articles[$___article_id]['seo-desc'];?>" />
+		<meta name="twitter:image" content="/charter/data/articles/<?=$___article_id;?>.png" />
+		<meta property="twitter:url" content="/charter/article/<?=$___articles[$___article_id]['url'];?>" />
+	<?}else{?>
+		<title>Book your private jet now! Reach anywhere you want, how you want</title>
+		<meta name="description" content="Imperium Jets is committed to the highest safety standard and offers various private aviation solutions - Charter, Share & By Seat flights" />
+		<meta name="keywords" value="private jet, jet flight, by the seat flight, jet operator" />
+		<meta property="og:title" content="Book your private jet now! Reach anywhere you want, how you want" />
+		<meta property="og:description" content="Imperium Jets is committed to the highest safety standard and offers various private aviation solutions - Charter, Share & By Seat flights" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.impjets.com/charter/" />
+		<meta property="og:image" content="https://www.impjets.com/charter/home-og-image.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="impjets.com" />
+		<meta name="twitter:title" content="Book your private jet now! Reach anywhere you want, how you want" />
+		<meta name="twitter:description" content="Imperium Jets is committed to the highest safety standard and offers various private aviation solutions - Charter, Share & By Seat flights" />
+		<meta property="twitter:url" content="https://www.impjets.com/" />
+		<meta name="twitter:image" content="https://www.impjets.com/charter/home-og-image.png" />
+	<?}?>
+		
+		<link rel="shortcut icon" href="/assets/images/svg/favicon.svg"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		
+		<script defer="defer" src="/js/chunk-vendors.7a08ffc9.js"></script>
+		<script defer="defer" src="/js/app.a04f8d75.js"></script>
+		<link href="/css/chunk-vendors.1cfd3129.css" rel="stylesheet" />
+		<link href="/css/app.41efe879.css" rel="stylesheet" />
+				
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || []; w[l].push({
+					'gtm.start':
+						new Date().getTime(), event: 'gtm.js'
+				}); var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+						'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-MSGDQBK');
+		</script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+		</script>
+		<!-- End Google Tag Manager -->
+	</head>
+	<body>
+		
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSGDQBK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+		<div id="app"></div>
+		
+		<!-- Accessibility Code for "www.imp-jets.com" --> 
+		<script> window.interdeal = { "sitekey": "6e94b8e3c7648e603cdbae6107d9c771", "Position": "Left", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "80%", null ], "scale": [ "0.8", "0.8" ], "color": { "main": "#0a51f2", "second": "" }, "icon": { "type": 1, "shape": "semicircle", "outline": false } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = interdeal.domains.js + 'core/4.4.1/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-tq2wb4PBHqpUqBTfTG32Sl7oexERId9xGHX2O3yF91IYLII2OwM1gJVBXGbEPaLmfSQrIE+uAOzNOuEUZHHM+g=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+		
+		<?
+		if($___articles[$___article_id]['id']>0){
+			echo '<div class="article-inner-wrapper-22">';
+			include_once('data/articles/'.$___article_id.'.html');
+			echo '</div>';
+		}
+		?>
+		
+	</body>
+</html>

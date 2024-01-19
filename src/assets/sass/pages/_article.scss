@@ -1,0 +1,155 @@
+.article-section {
+  padding-bottom: 50px;
+  margin-top: 64px;
+  @include mobile {
+    margin-top: 0;
+  }
+
+  .article-bg {
+    background-color: #f8f8f8;
+    padding: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include mobile {
+      padding: 50px 25px;
+    }
+  }
+  .article-image {
+    margin: 20px 0;
+  }
+  .articles {
+    p {
+      color: #6b7280;
+      font-size: 16px;
+      margin: 24px 0;
+      line-height: 1.75em;
+    }
+    img {
+      width: 100%;
+    }
+    ul {
+      padding-left: 18px;
+      li {
+        color: #6b7280;
+        list-style: disc;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .article-header {
+    .article-info__title {
+      margin-bottom: 16px;
+      h5 {
+        font-size: 16px;
+      }
+    }
+    p {
+      color: #6b7280;
+      margin: 24px 0;
+    }
+  }
+
+  .share-article {
+    display: flex;
+    gap: 20px;
+    .share {
+      display: -webkit-inline-box;
+      vertical-align: middle;
+      i {
+        margin-right: 10px;
+      }
+    }
+    A:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.blog-card-main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .blog-card {
+    max-width: 384px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 1px #141426;
+    position: relative;
+    min-height: 572px;
+
+    &:hover {
+      box-shadow: 0 0 8px #14142655;
+    }
+
+    img {
+      margin-bottom: 24px;
+    }
+    h2 {
+      padding: 0 8px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.33em;
+      margin-bottom: 8px;
+    }
+    p {
+      padding: 0 8px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5em;
+      margin-bottom: 24px;
+    }
+    .social-status {
+      padding: 0 8px;
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+        border-radius: 50%;
+      }
+      .about {
+        margin-left: 12px;
+        h5 {
+          font-size: 14px;
+          line-height: 1.428em;
+        }
+        p {
+          font-size: 14px;
+          color: #737373;
+          margin-bottom: 0;
+          line-height: 1.428em;
+        }
+      }
+    }
+    .article-link {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+
+.news-blog-section {
+  border-bottom: 1px solid #e5e7eb;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .article-info__title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+.article-link {
+  padding: 0 8px;
+  margin-bottom: 12px;
+  i {
+    margin-left: 8px;
+    transition: ease 0.5s;
+  }
+  &:hover {
+    i {
+      transform: translateX(8px);
+    }
+  }
+}

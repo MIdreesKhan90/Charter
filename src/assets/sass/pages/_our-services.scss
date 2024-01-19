@@ -1,0 +1,35 @@
+.our-services-section {
+  border-bottom: 1px solid #e5e7eb;
+  .section-articles {
+    // background-color: #f8f8f8;
+    margin-bottom: 48px;
+    @include tablet {
+      margin-bottom: 0px;
+    }
+    .article-block {
+      .article-image {
+        width: calc(50vw - 5px);
+        @include tablet {
+          width: 100%;
+        }
+      }
+      .article-info {
+        width: calc(50vw - 5px);
+        padding: 129px 127px 129px 110px;
+        @include tablet {
+          width: 100%;
+          padding: 48px 24px;
+        }
+      }
+    }
+  }
+  .reverse {
+    background-color: #ffffff;
+    @include tablet {
+      background-color: #f8f8f8;
+    }
+    .article-info {
+      padding: 129px 110px 129px 127px;
+    }
+  }
+}

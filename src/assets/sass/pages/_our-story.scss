@@ -1,0 +1,85 @@
+.our-story-banner {
+  margin-top: -120px;
+  height: 750px;
+  background-image: url($images-path + "/our-story-banner-be.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+
+  @include mobile {
+    height: 400px;
+    padding-top: 240px;
+  }
+
+
+  .our-story-header {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.33em;
+    margin-bottom: 26px;
+    letter-spacing: 0.08em;
+    color: #141426;
+
+    @include mobile {
+      font-size: 48px;
+    }
+  }
+
+  .our-story-body {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5em;
+    max-width: 544px;
+    margin: 0 auto;
+    color: #374151;
+  }
+}
+
+.section-our-stories {
+  padding: 100px 0 80px;
+
+  .story-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -32px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin: 0 -15px;
+    }
+
+    .story-col {
+      width: 50%;
+      padding: 0 32px;
+
+      @include mobile {
+        width: 100%;
+        padding: 0 16px;
+      }
+
+      .ceo-image {
+        @include mobile {
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 48px;
+        }
+      }
+
+      .article-info__body {
+        margin-top: 0;
+        font-size: 18px;
+        color: #4B5563;
+      }
+    }
+  }
+
+  .left {
+    p {
+      max-width: 548px;
+    }
+  }
+}
